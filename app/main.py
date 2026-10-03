@@ -6,8 +6,7 @@ app = FastAPI(
     version = "0.1.0"   
 )
 
-#PRIMERA RUTA
+# PRIMERA RUTA
 @app.get("/")
-
 def read_root():
     return {"mensaje" : "Funcionando correctamente"}
