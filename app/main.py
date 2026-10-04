@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+from app.endpoints import router
+
 
 app = FastAPI(
     title = "Mi API de tareas",
@@ -10,3 +12,5 @@ app = FastAPI(
 @app.get("/")
 def read_root():
     return {"mensaje" : "Funcionando correctamente"}
+
+app.include_router(router)  
